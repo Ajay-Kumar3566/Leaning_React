@@ -8,9 +8,18 @@ function App() {
   let [counter,setCounter] = useState(15)
   // let counter = 15
   const addValue =()=>{
-    counter = counter+1
-    setCounter(counter)
+    
+    // setCounter(counter+1)
+    // setCounter(counter+1)
+    // setCounter(counter+1)// it all setCounter () will be treated as single bunch . so it will see "ARE EK HI KAAM TO HO RHA HAI "
     // console.log("clicked",counter);//click krne per counter ki value to bdh rhi hai lekin UI per show nhi ho rhi hai ,,, yhi to kaam hi react ka , smjhe guru..isiliye hook ka use karte hai 
+
+
+    setCounter(prevCounter => prevCounter+1)
+    setCounter(prevCounter => prevCounter+1)
+    setCounter(prevCounter => prevCounter+1)
+    setCounter(prevCounter => prevCounter+1)
+    // here a single setCounter() will be treated as a single bunch so all method will change the value of counter
     
       
   }
